@@ -21,6 +21,7 @@ public class HealthWtrIdxService {
 	}
 
 	@Scheduled(fixedRate = 1000 * 60 * 60)
+
 	public void requestHealthWtrIdxData() throws IOException {
 		System.out.println("----");
 		getHealthWtrIdxData("getAsthmaIdx", "1100000000"); // ¼­¿ï
@@ -136,5 +137,7 @@ public class HealthWtrIdxService {
 			repo.save(new HealthWtrIdx(item));
 
 		}
+
 	}
+
 }
