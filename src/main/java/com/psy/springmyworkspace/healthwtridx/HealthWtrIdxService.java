@@ -20,7 +20,7 @@ public class HealthWtrIdxService {
 		this.repo = repo;
 	}
 
-	@Scheduled(fixedRate = 1000 * 60 * 60 * 12)
+	@Scheduled(fixedRate = 1000 * 60 * 60)
 	public void requestHealthWtrIdxData() throws IOException {
 		System.out.println("----");
 		getHealthWtrIdxData("getAsthmaIdx", "1100000000"); // ¼­¿ï
@@ -105,7 +105,7 @@ public class HealthWtrIdxService {
 
 		String serviceKey = "4xEmD9%2B%2BLp9Fu4gyx39cMubj7O3NgdEvWopZWRJdwXI%2F57PnaYnq5tbbrEnnBcdy9ICFSppjOIKfrDdlbmYXcQ%3D%3D";
 
-		SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHH");
+		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd06");
 		Date time = new Date();
 		String today = format.format(time);
 		System.out.println(today);

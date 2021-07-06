@@ -17,10 +17,10 @@ public class HealthWtrIdxController {
 		this.repo = repo;
 	}
 
-	@RequestMapping(value = "/opendata/healthWtrIdx", method = RequestMethod.GET)
+	@RequestMapping(value = "/opendata/healthwtridx", method = RequestMethod.GET)
 	public List<HealthWtrIdx> getListByDataType() {
 		Order[] orders = { new Order(Sort.Direction.DESC, "date"), new Order(Sort.Direction.ASC, "code") };
-		return repo.findAll(PageRequest.of(0, 24, Sort.by(orders))).toList();
+		return repo.findAll(PageRequest.of(0, 68, Sort.by(orders))).toList();
 
 	}
 }
